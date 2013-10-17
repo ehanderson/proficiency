@@ -56,3 +56,8 @@ post '/users' do
     erb :sign_up
   end
 end
+
+get'/skills' do
+  
+  erb :skills
+end
