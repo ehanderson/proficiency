@@ -19,3 +19,5 @@ design_skills.each do |skill|
 end
 
 # TODO: create associations between users and skills
+# Proficiency.create (user_id: 1, skill_id: 2, years: 2, formal: true)
+# Proficiency.create (user_id: 2, skill_id: 2, years: 3, formal: true)
