@@ -1,7 +1,17 @@
-<form>
-  <input type= "checkbox" id="<%=skill.name%>">checkbox<br>
-</form>
 
 
+<div class="container">
 
-what
+  <h1>Please Select Your Skills</h1>
+  <form action="/skills" method="post">
+    <%@skills.each do |skill| %>
+      <input type= "checkbox" id="<%=skill.name%>"><%=skill.name%><br>
+      <input type="text" name="years_proficient">Years Proficient<br>
+      <input type="checkbox" name="formal" value="true">Formal Training?<br>
+    <% end %>
+
+    <button type="submit" value="submit">Submit</button>
+  </form>
+</div>
+
+

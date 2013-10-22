@@ -5,6 +5,18 @@ get '/' do
   erb :index
 end
 
+get '/skills/new' do
+  @skills = Skill.all
+
+  erb :skills
+end
+
+post '/skills' do
+  
+    @proficiency = Proficiency.create(years: params[:years_proficient], user_id: session[:user_id])
+
+  redirect('/')
+end
 #----------- SESSIONS -----------
 
 get '/sessions/new' do
@@ -57,7 +69,3 @@ post '/users' do
   end
 end
 
-get'/skills' do
-  
-  erb :skills
-end
